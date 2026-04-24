@@ -20,7 +20,6 @@ Error generating stack: `+e.message+`
     font-size: 15px;
     font-weight: 600;
 `,ur=or.div`
-    margin-top: 10px;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -29,9 +28,35 @@ Error generating stack: `+e.message+`
     width: 280px;
     height: 50px;
     border-radius: 30px;
-`;function dr({name:e,time:t,servings:n,calories:r,image:i}){return(0,E.jsxs)(sr,{children:[(0,E.jsx)(cr,{src:i,alt:e}),(0,E.jsx)(lr,{children:e}),(0,E.jsxs)(ur,{children:[(0,E.jsx)(de,{text:t,icon:(0,E.jsx)(ce,{})}),(0,E.jsx)(de,{text:n,icon:(0,E.jsx)(le,{})}),(0,E.jsx)(de,{text:r,icon:(0,E.jsx)(ue,{})})]})]},e)}var fr=or.ul`
+`,dr=or.div`
+  margin-top: 10px;
+  background-color: white;
+  width: 210px;
+  height: 80px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 12px;
+`,fr=or.div`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+`,pr=or.p`
+    margin-left: 5px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    align-items: flex-start;
+`,mr=or.span`
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: ${({active:e})=>e?`white`:`black`};
+  background-color: ${({active:e,type:t})=>{if(!e)return`#eee`;if(t===`easy`||t===`medium`||t===`hard`)return`#f09696`}};
+`;function hr({difficulty:e}){return(0,E.jsxs)(dr,{children:[(0,E.jsx)(pr,{children:`Difficulty`}),(0,E.jsxs)(fr,{children:[(0,E.jsx)(mr,{type:`easy`,active:e===0,children:`Easy`}),(0,E.jsx)(mr,{type:`medium`,active:e===1,children:`Medium`}),(0,E.jsx)(mr,{type:`hard`,active:e===2,children:`Hard`})]})]})}function gr({name:e,time:t,servings:n,calories:r,image:i,difficulty:a}){return(0,E.jsxs)(sr,{children:[(0,E.jsx)(cr,{src:i,alt:e}),(0,E.jsx)(lr,{children:e}),(0,E.jsxs)(ur,{children:[(0,E.jsx)(de,{text:t,icon:(0,E.jsx)(ce,{})}),(0,E.jsx)(de,{text:n,icon:(0,E.jsx)(le,{})}),(0,E.jsx)(de,{text:r,icon:(0,E.jsx)(ue,{})})]}),(0,E.jsx)(hr,{difficulty:a})]})}var _r=or.ul`
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
-`;function pr({dishes:e}){return(0,E.jsx)(fr,{children:e.map(e=>(0,E.jsx)(dr,{...e},e.name))})}var mr=[{name:`Smoked salmon burger`,time:`20 min`,servings:`6 servings`,calories:`210 calories`,image:`https://assets.bonappetit.com/photos/62cc4eca787a907e535e8e7f/1:1/w_2580%2Cc_limit/0711-black-bean-burger-lede.jpg`},{name:`Tomatoes With Creamy Feta`,time:`15 min`,servings:`3 servings`,calories:`600 calories`,image:`https://assets.bonappetit.com/photos/62b4926736e0c90647da6b71/1:1/w_2580%2Cc_limit/0623-diana-yen-tomato-recipe-lede.jpg`},{name:`Spicy potato salad`,time:`30 min`,servings:`2 servings`,calories:`320 calories`,image:`https://assets.bonappetit.com/photos/62bf35ae872a6cfbb260f286/1:1/w_2580%2Cc_limit/0701-tj-recipe-potato-v2.jpg`},{name:`Chicken Biryani`,time:`40 min`,servings:`4 servings`,calories:`700 calories`,image:`https://assets.bonappetit.com/photos/5db1b689823b960008d8468d/1:1/w_2580%2Cc_limit/Chicken-Biryani-Lede-NEW.jpg`}];function hr(){return(0,E.jsx)(E.Fragment,{children:(0,E.jsx)(pr,{dishes:mr})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,E.jsx)(_.StrictMode,{children:(0,E.jsx)(hr,{})}));
+`;function vr({dishes:e}){return(0,E.jsx)(_r,{children:e.map(e=>(0,E.jsx)(gr,{...e},e.name))})}var yr=[{name:`Smoked salmon burger`,time:`20 min`,servings:`6 servings`,calories:`210 calories`,image:`https://assets.bonappetit.com/photos/62cc4eca787a907e535e8e7f/1:1/w_2580%2Cc_limit/0711-black-bean-burger-lede.jpg`,difficulty:0},{name:`Tomatoes With Creamy Feta`,time:`15 min`,servings:`3 servings`,calories:`600 calories`,image:`https://assets.bonappetit.com/photos/62b4926736e0c90647da6b71/1:1/w_2580%2Cc_limit/0623-diana-yen-tomato-recipe-lede.jpg`,difficulty:0},{name:`Spicy potato salad`,time:`30 min`,servings:`2 servings`,calories:`320 calories`,image:`https://assets.bonappetit.com/photos/62bf35ae872a6cfbb260f286/1:1/w_2580%2Cc_limit/0701-tj-recipe-potato-v2.jpg`,difficulty:1},{name:`Chicken Biryani`,time:`40 min`,servings:`4 servings`,calories:`700 calories`,image:`https://assets.bonappetit.com/photos/5db1b689823b960008d8468d/1:1/w_2580%2Cc_limit/Chicken-Biryani-Lede-NEW.jpg`,difficulty:2}];function br(){return(0,E.jsx)(E.Fragment,{children:(0,E.jsx)(vr,{dishes:yr})})}(0,v.createRoot)(document.getElementById(`root`)).render((0,E.jsx)(_.StrictMode,{children:(0,E.jsx)(br,{})}));
