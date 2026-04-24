@@ -7,6 +7,7 @@ import DisheImg from "./DisheImgStyle"
 import DisheText from "./DisheTextStyle"
 import DisheInfo from "./DisheInfoStyle";
 
+
 import Difficulty from "./Difficulty"
 
 function DishesItem({ name, time, servings, calories, image, difficulty }) {
